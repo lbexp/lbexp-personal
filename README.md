@@ -2,6 +2,11 @@
 
 📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
 
+### Requirements
+
+Node version 19.8.1
+PNPM version 7.5.1
+
 ## Development
 
 Run the Vite dev server:
