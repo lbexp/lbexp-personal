@@ -12,7 +12,7 @@ import Projects from './components/Projects';
 import styles from './styles.module.css';
 
 export const meta: MetaFunction = () => {
-	return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
+	return [{ title: 'Lbexp' }, { name: 'description', content: "Lbexp's site" }];
 };
 
 export default function Index() {
