@@ -1,17 +1,26 @@
+import { useEffect } from 'react';
 import type { MetaFunction } from '@remix-run/node';
+
+import useStyleScrollEvent from '~/hooks/use-style-scroll-event';
+
 import Footer from '~/components/Footer';
 import Navbar from '~/components/Navbar';
+import Introduction from './components/Introduction';
+import Experiences from './components/Experiences';
 
 export const meta: MetaFunction = () => {
 	return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
 };
 
 export default function Index() {
+	useStyleScrollEvent();
+
 	return (
-		<div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
-			<Navbar />
-			<h1>Welcome to Remix</h1>
-			<Footer />
-		</div>
+		<>
+			{/* <Navbar /> */}
+			<Introduction />
+			{/* <Experiences /> */}
+			{/* <Footer /> */}
+		</>
 	);
 }
