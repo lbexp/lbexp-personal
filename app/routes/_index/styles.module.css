@@ -1,0 +1,25 @@
+.wrapper {
+	padding: 0px 20px;
+}
+
+.section {
+	padding: 30px 0px;
+}
+
+.content-wrapper {
+	padding: 40px 0px 20px 0px;
+}
+
+@media screen and (min-width: 769px) {
+	.wrapper {
+		padding: 0px 100px;
+	}
+
+	.content-wrapper {
+		padding: 80px 0px 40px 0px;
+	}
+
+	.section {
+		padding: 60px 0px;
+	}
+}

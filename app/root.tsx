@@ -14,7 +14,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Meta />
 				<Links />
 			</head>
-			<body style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
+			<body>
 				{children}
 				<ScrollRestoration />
 				<Scripts />
