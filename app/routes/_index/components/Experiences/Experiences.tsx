@@ -9,8 +9,6 @@ export default function Experiences() {
 			<div className={styles.content}>
 				{EXPERIENCES.map((experience) => (
 					<div className={styles['item-journey-wrapper']}>
-						<span className={styles['item-journey-arrow']}>⬅️</span>
-
 						<div className={styles['item-journey-content-wrapper']}>
 							<div className={styles['item-journey-header']}>
 								<h3 className={styles['item-journey-title']}>{experience.title}</h3>

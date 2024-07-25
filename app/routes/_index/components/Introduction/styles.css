@@ -1,0 +1,8 @@
+@keyframes textdrop {
+	from {
+		transform: translateY(-500%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
