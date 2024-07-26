@@ -18,10 +18,10 @@ export const meta: MetaFunction = () => {
 export const links: LinksFunction = () => [...introductionLinks()];
 
 export default function Index() {
-	useStyleScrollEvent();
+	// useStyleScrollEvent();
 
 	return (
-		<div className={styles.wrapper}>
+		<>
 			<Header />
 			<div className={styles['content-wrapper']}>
 				<section className={styles.section} id="introduction">
@@ -35,6 +35,6 @@ export default function Index() {
 				</section>
 			</div>
 			<Footer />
-		</div>
+		</>
 	);
 }

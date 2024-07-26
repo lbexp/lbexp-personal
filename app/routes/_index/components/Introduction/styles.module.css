@@ -18,7 +18,7 @@
 
 @keyframes blink {
 	from {
-		border-right-color: #2c3e50;
+		border-right-color: var(--color-primary);
 	}
 	to {
 		border-right-color: transparent;

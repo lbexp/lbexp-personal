@@ -22,11 +22,11 @@
 }
 
 .github-logo {
-	fill: #2c3e50;
+	fill: var(--color-primary);
 }
 
 .github-logo:hover {
-	fill: black;
+	fill: var(--color-sub-primary);
 }
 
 .linkedin-anchor {
@@ -36,9 +36,9 @@
 }
 
 .linkedin-logo {
-	fill: #2c3e50;
+	fill: var(--color-primary);
 }
 
 .linkedin-logo:hover {
-	fill: black;
+	fill: var(--color-sub-primary);
 }

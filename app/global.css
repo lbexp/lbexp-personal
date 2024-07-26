@@ -160,11 +160,17 @@ button {
 
 /* End of CSS Reset */
 
+:root {
+	--color-primary: #2c3e50;
+	--color-sub-primary: #ff0211;
+	--color-secondary: white;
+}
+
 body {
 	font-family: IBM Plex Mono, monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #2c3e50;
+	color: var(--color-primary);
 }
 
 h1,
@@ -208,11 +214,11 @@ h6 {
 
 a {
 	font-weight: bold;
-	color: #2c3e50;
+	color: var(--color-primary);
 }
 
 a:hover {
-	color: black;
+	color: var(--color-sub-primary);
 }
 
 @media screen and (min-width: 769px) {

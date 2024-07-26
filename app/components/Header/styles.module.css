@@ -1,13 +1,43 @@
+@keyframes dropdown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50% {
+		transform: translateY(20%);
+	}
+	80% {
+		transform: translateY(-10%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+.container {
+	z-index: 1001;
+
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	border-bottom: 1.5px solid var(--color-primary);
+
+	animation: dropdown 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
+
 .wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 0px 10px 0px;
 }
 
 .logo {
-	background: #2c3d4f;
-	color: white;
+	color: var(--color-primary);
 	padding: 5px 10px;
 }
 
@@ -16,6 +46,8 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
+
+	margin-right: 10px;
 }
 
 .github-anchor {
@@ -25,15 +57,36 @@
 }
 
 .github-logo {
-	fill: #2c3e50;
+	fill: var(--color-primary);
 }
 
 .github-logo:hover {
-	fill: black;
+	fill: var(--color-sub-primary);
 }
 
-@media screen and (min-width: 769px) {
-	.wrapper {
-		padding: 40px 0px 20px 0px;
-	}
+.pin {
+	--pin-height: 56px;
+
+	height: var(--pin-height);
+
+	position: absolute;
+	bottom: calc(-1 * var(--pin-height));
+	right: 48px;
+
+	border-right: 1.5px solid var(--color-primary);
+}
+
+.pin-dot {
+	width: 20px;
+	height: 20px;
+
+	position: absolute;
+	bottom: 0;
+	transform: translateX(-47.5%);
+
+	background-color: var(--color-sub-primary);
+	border-radius: 50%;
+	border: 1.5px solid var(--color-primary);
+
+	cursor: pointer;
 }
