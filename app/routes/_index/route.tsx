@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
 import type { LinksFunction, MetaFunction } from '@remix-run/node';
 
-import useStyleScrollEvent from '~/hooks/use-style-scroll-event';
+// import useStyleScrollEvent from '~/hooks/use-style-scroll-event';
 
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';

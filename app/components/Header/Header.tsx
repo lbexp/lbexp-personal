@@ -24,7 +24,12 @@ export default function Header() {
 
 				<nav className={styles.nav}>
 					<a href="#journey">Journey</a> |<a href="#projects">Projects</a> |
-					<a href="https://github.com/lbexp" target="_blank" className={styles['github-anchor']}>
+					<a
+						href="https://github.com/lbexp"
+						target="_blank"
+						rel="noreferrer"
+						className={styles['github-anchor']}
+					>
 						<svg
 							className={styles['github-logo']}
 							aria-hidden="true"
@@ -45,9 +50,13 @@ export default function Header() {
 
 			<div className={styles.pin}>
 				<div
+					role="button"
+					tabIndex={0}
 					className={styles['pin-dot']}
 					onClick={() => setHideNav(false)}
+					onFocus={() => setHideNav(false)}
 					onMouseEnter={() => setHideNav(false)}
+					onKeyPress={() => setHideNav(false)}
 				/>
 			</div>
 		</div>
