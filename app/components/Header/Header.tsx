@@ -56,7 +56,7 @@ export default function Header() {
 					onClick={() => setHideNav(false)}
 					onFocus={() => setHideNav(false)}
 					onMouseEnter={() => setHideNav(false)}
-					onKeyPress={() => setHideNav(false)}
+					onKeyDown={() => setHideNav(false)}
 				/>
 			</div>
 		</div>

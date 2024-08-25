@@ -34,11 +34,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0px 20px;
 }
 
 .logo {
 	color: var(--color-primary);
-	padding: 5px 10px;
+	padding: 5px 0px;
 }
 
 .nav {
@@ -46,8 +47,6 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
-
-	margin-right: 10px;
 }
 
 .github-anchor {
