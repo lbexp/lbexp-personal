@@ -1,10 +1,10 @@
-import { PROJECTS } from '~/routes/_index/constants';
+import { PROJECTS } from '~/models/project';
 import styles from './styles.module.css';
 
 export default function Projects() {
 	return (
 		<section>
-			<h2 className={styles.title}>Projects I've professionally worked on:</h2>
+			<h2 className={styles.title}>Projects I&apos;ve professionally worked on:</h2>
 
 			<div className={styles.content}>
 				{PROJECTS.map((project, projectIndex) => {
