@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { LinksFunction } from '@remix-run/node';
 
 import injectedStyles from './styles.css?url';
