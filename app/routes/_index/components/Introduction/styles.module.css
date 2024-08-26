@@ -20,13 +20,7 @@
 }
 
 .desc {
-	position: relative;
-	max-width: max-content;
-
-	border-right: 2px solid transparent;
-
 	font-size: 1.25rem;
-	white-space: nowrap;
 	overflow: hidden;
 }
 
@@ -37,10 +31,10 @@
 
 @media screen and (min-width: 769px) {
 	.title {
-		margin-bottom: 12px;
+		margin-bottom: 24px;
 
-		line-height: 8.7vw;
-		font-size: 6.7vw;
+		line-height: 4.9rem;
+		font-size: 5rem;
 	}
 
 	.desc {

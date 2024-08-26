@@ -1,5 +1,9 @@
 .content-wrapper {
-	margin-bottom: 64px;
+	max-width: 1240px;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+	margin: 0px auto 72px;
 }
 
 .section {
