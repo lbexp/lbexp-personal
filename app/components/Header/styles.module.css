@@ -34,7 +34,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0px 20px;
+	padding: 5px 40px;
+}
+
+.logo-wrapper {
+	color: var(--color-sub-primary);
 }
 
 .logo {
@@ -49,20 +53,6 @@
 	gap: 10px;
 }
 
-.github-anchor {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.github-logo {
-	fill: var(--color-primary);
-}
-
-.github-logo:hover {
-	fill: var(--color-sub-primary);
-}
-
 .pin {
 	--pin-height: 56px;
 
@@ -70,7 +60,7 @@
 
 	position: absolute;
 	bottom: calc(-1 * var(--pin-height));
-	right: 48px;
+	right: 50px;
 
 	border-right: 1.5px solid var(--color-primary);
 }
