@@ -1,12 +1,11 @@
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 0px;
+	gap: 64px;
 }
 
 .title {
 	font-size: 2rem;
-	margin-bottom: 64px;
 }
 
 .content {

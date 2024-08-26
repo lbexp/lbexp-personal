@@ -7,15 +7,6 @@
 	}
 }
 
-@keyframes textdrop {
-	from {
-		transform: translateY(-500%);
-	}
-	to {
-		transform: translateY(0%);
-	}
-}
-
 @keyframes blink {
 	from {
 		border-right-color: var(--color-primary);
@@ -25,9 +16,16 @@
 	}
 }
 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 480px;
+}
+
 .title {
-	margin-bottom: 1rem;
-	font-size: 2.5rem;
+	margin-bottom: 16px;
+	font-size: 3rem;
 }
 
 .desc {
@@ -45,7 +43,7 @@
 
 @media screen and (min-width: 769px) {
 	.title {
-		margin-bottom: 0.75rem;
+		margin-bottom: 12px;
 
 		line-height: 8.7vw;
 		font-size: 6.7vw;

@@ -18,31 +18,34 @@ export default function Header() {
 	});
 
 	return (
-		<div
-			className={styles.container}
-			{...(hideNav && { style: { transform: `translateY(-100%)` } })}
-		>
-			<div className={styles.wrapper}>
-				<Link to="/" className={styles['logo-wrapper']}>
-					<h1 className={styles.logo}>lbexp</h1>
-				</Link>
+		<>
+			<div
+				className={styles.container}
+				{...(hideNav && { style: { transform: `translateY(-100%)` } })}
+			>
+				<div className={styles.wrapper}>
+					<Link to="/" className={styles['logo-wrapper']}>
+						<h1 className={styles.logo}>lbexp</h1>
+					</Link>
 
-				<nav className={styles.nav}>
-					<Link to={`#${CONTACTS_ELEMENT_ID}`}>Contacts</Link>
-				</nav>
-			</div>
+					<nav className={styles.nav}>
+						<Link to={`#${CONTACTS_ELEMENT_ID}`}>Contacts</Link>
+					</nav>
+				</div>
 
-			<div className={styles.pin}>
-				<div
-					role="button"
-					tabIndex={0}
-					className={styles['pin-dot']}
-					onClick={() => setHideNav(false)}
-					onFocus={() => setHideNav(false)}
-					onMouseEnter={() => setHideNav(false)}
-					onKeyDown={() => setHideNav(false)}
-				/>
+				<div className={styles.pin}>
+					<div
+						role="button"
+						tabIndex={0}
+						className={styles['pin-dot']}
+						onClick={() => setHideNav(false)}
+						onFocus={() => setHideNav(false)}
+						onMouseEnter={() => setHideNav(false)}
+						onKeyDown={() => setHideNav(false)}
+					/>
+				</div>
 			</div>
-		</div>
+			<span className={styles.spacer} />
+		</>
 	);
 }

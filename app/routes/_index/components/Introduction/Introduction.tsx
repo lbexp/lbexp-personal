@@ -7,7 +7,7 @@ export const links: LinksFunction = () => [{ rel: 'stylesheet', href: injectedSt
 
 export default function Introduction() {
 	return (
-		<section>
+		<section className={styles.wrapper}>
 			<h2 className={styles.title}>
 				{Array.from("Fiqar 'lbexp' Aprialim").map((char, index) => (
 					<span
