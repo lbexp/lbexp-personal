@@ -1,3 +1,10 @@
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 50px;
+}
+
 .title {
 	font-size: 2.5rem;
 	margin-bottom: 1.5rem;
@@ -10,13 +17,32 @@
 }
 
 .item-journey-wrapper {
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 2rem;
 }
 
-.item-journey-arrow {
-	font-size: 1.5rem;
+.item-journey-circle {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: solid 2px var(--color-primary);
+	border-radius: 50%;
+
+	&[data-active='true'] {
+		background-color: var(--color-sub-primary);
+	}
+}
+
+.item-journey-line {
+	position: absolute;
+	display: block;
+	width: 1.5px;
+	height: calc(150% - 29px);
+	top: calc(50% + 10px);
+	left: 9px;
+	background-color: var(--color-primary);
 }
 
 .item-journey-title {

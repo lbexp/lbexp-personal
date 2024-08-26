@@ -1,6 +1,6 @@
 export interface Experience {
 	title: string;
 	subtitle: string;
-	time: string;
+	date: string;
 	desc: string;
 }

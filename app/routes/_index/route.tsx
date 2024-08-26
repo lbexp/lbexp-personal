@@ -1,12 +1,9 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node';
 
-// import useStyleScrollEvent from '~/hooks/use-style-scroll-event';
-
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import Introduction, { links as introductionLinks } from './components/Introduction';
 import Experiences from './components/Experiences';
-import Projects from './components/Projects';
 
 import styles from './styles.module.css';
 
@@ -17,8 +14,6 @@ export const meta: MetaFunction = () => {
 export const links: LinksFunction = () => [...introductionLinks()];
 
 export default function Index() {
-	// useStyleScrollEvent();
-
 	return (
 		<>
 			<Header />
@@ -28,9 +23,6 @@ export default function Index() {
 				</section>
 				<section className={styles.section} id="experiences">
 					<Experiences />
-				</section>
-				<section className={styles.section} id="projects">
-					<Projects />
 				</section>
 			</div>
 			<Footer />
