@@ -18,7 +18,7 @@ function Item(props: {
 			</div>
 
 			<div className={styles['item-journey-content-wrapper']}>
-				<div className={styles['item-journey-header']}>
+				<div className={styles['item-journey-content-value']}>
 					<h3 className={styles['item-journey-title']}>{title}</h3>
 					<h4 className={styles['item-journey-subtitle']}>{subtitle}</h4>
 					<p className={styles['item-journey-time']}>{date}</p>
@@ -32,9 +32,11 @@ export default function Experiences() {
 	return (
 		<section className={styles.wrapper}>
 			<h2 className={styles.title}>
-				My journey&nbsp;
-				<br className={styles['title-break']} />
-				so far:
+				<span className={styles['title-value']}>
+					My journey&nbsp;
+					<br className={styles['title-break']} />
+					so far:
+				</span>
 			</h2>
 
 			<div className={styles.content}>

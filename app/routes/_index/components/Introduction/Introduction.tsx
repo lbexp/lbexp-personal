@@ -20,7 +20,9 @@ export default function Introduction() {
 					/>
 				))}
 			</h2>
-			<p className={styles.desc}>Software Engineer based in Indonesia</p>
+			<p className={styles.desc}>
+				<span className={styles['desc-value']}>Software Engineer based in Indonesia</span>
+			</p>
 		</section>
 	);
 }

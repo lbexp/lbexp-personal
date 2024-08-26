@@ -1,3 +1,12 @@
+@keyframes appear {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -5,7 +14,14 @@
 }
 
 .title {
+	overflow: hidden;
 	font-size: 2rem;
+}
+
+.title-value {
+	height: 100%;
+	display: block;
+	animation: appear 0.5s ease 0s 1 normal both;
 }
 
 .content {
@@ -79,7 +95,14 @@
 }
 
 .item-journey-content-wrapper {
-	min-height: 122px;
+	overflow: hidden;
+	height: 122px;
+}
+
+.item-journey-content-value {
+	height: 100%;
+	display: block;
+	animation: appear 0.5s ease 0s 1 normal both;
 }
 
 .title-break {
