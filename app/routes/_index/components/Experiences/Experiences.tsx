@@ -12,8 +12,10 @@ function Item(props: {
 
 	return (
 		<div className={styles['item-journey-wrapper']}>
-			<span className={styles['item-journey-circle']} data-active={active} />
-			{withLine ? <span className={styles['item-journey-line']} /> : null}
+			<div>
+				<span className={styles['item-journey-circle']} data-active={active} />
+				{withLine ? <span className={styles['item-journey-line']} /> : null}
+			</div>
 
 			<div className={styles['item-journey-content-wrapper']}>
 				<div className={styles['item-journey-header']}>
@@ -30,8 +32,8 @@ export default function Experiences() {
 	return (
 		<section className={styles.wrapper}>
 			<h2 className={styles.title}>
-				My journey
-				<br />
+				My journey&nbsp;
+				<br className={styles['title-break']} />
 				so far:
 			</h2>
 
