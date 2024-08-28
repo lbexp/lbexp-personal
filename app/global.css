@@ -168,7 +168,7 @@ button {
 }
 
 #color-mode-wrapper[data-color='dark'] {
-	--color-primary: white;
+	--color-primary: #c3c3c3;
 	--color-sub-primary: #ff0211;
 	--color-secondary: #2c3e50;
 }
