@@ -16,13 +16,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Meta />
 				<Links />
 			</head>
-			<ColorModeProvider>
-				<body>
-					{children}
+			<body>
+				<ColorModeProvider>
+					<div className="container">{children}</div>
 					<ScrollRestoration />
 					<Scripts />
-				</body>
-			</ColorModeProvider>
+				</ColorModeProvider>
+			</body>
 		</html>
 	);
 }
