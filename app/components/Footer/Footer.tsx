@@ -51,8 +51,12 @@ export default function Footer() {
 						</svg>
 					</Link>
 				</div>
-				<p>Contact me: fiqarapr@gmail.com</p>
-				<span>ⓒ 2021</span>
+				<p>
+					Contact me:{' '}
+					<a className={styles.mail} href="mailto:fiqarapr@gmail.com">
+						fiqarapr@gmail.com
+					</a>
+				</p>
 			</div>
 		</footer>
 	);

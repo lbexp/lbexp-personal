@@ -3,7 +3,7 @@ import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import { COLOR_MODE_SEQUENCE } from '~/models/common';
 import { getLocalStorage, setLocalStorage } from '~/utils/local-storage';
 
-import { COLOR_LS_KEY, WRAPPER_ID } from './constants';
+import { COLOR_LS_KEY } from './constants';
 import ColorModeContext from './context';
 
 export default function ColorModeProvider({ children }: PropsWithChildren<unknown>) {
@@ -19,11 +19,13 @@ export default function ColorModeProvider({ children }: PropsWithChildren<unknow
 			if (nextIndex >= sequenceLength) {
 				const newIndex = nextIndex % sequenceLength;
 				setLocalStorage(COLOR_LS_KEY, COLOR_MODE_SEQUENCE[newIndex].value);
+				document.body.setAttribute('data-color', COLOR_MODE_SEQUENCE[newIndex].value);
 
 				return newIndex;
 			}
 
 			setLocalStorage(COLOR_LS_KEY, COLOR_MODE_SEQUENCE[nextIndex].value);
+			document.body.setAttribute('data-color', COLOR_MODE_SEQUENCE[nextIndex].value);
 
 			return nextIndex;
 		});
@@ -31,18 +33,21 @@ export default function ColorModeProvider({ children }: PropsWithChildren<unknow
 
 	useEffect(() => {
 		if (!initiated.current) {
-			const initialColor = getLocalStorage(COLOR_LS_KEY);
+			const initialColor = getLocalStorage<string>(COLOR_LS_KEY);
 
 			if (initialColor) {
 				const initialIndex = COLOR_MODE_SEQUENCE.findIndex((color) => color.value === initialColor);
 
 				if (initialIndex) {
 					setColorIndex(initialIndex);
+					document.body.setAttribute('data-color', initialColor);
 				} else {
 					setLocalStorage(COLOR_LS_KEY, COLOR_MODE_SEQUENCE[colorIndex].value);
+					document.body.setAttribute('data-color', COLOR_MODE_SEQUENCE[colorIndex].value);
 				}
 			} else {
 				setLocalStorage(COLOR_LS_KEY, COLOR_MODE_SEQUENCE[colorIndex].value);
+				document.body.setAttribute('data-color', COLOR_MODE_SEQUENCE[colorIndex].value);
 			}
 		}
 
@@ -57,9 +62,7 @@ export default function ColorModeProvider({ children }: PropsWithChildren<unknow
 				onChangeColor: changeColorIndex
 			}}
 		>
-			<div id={WRAPPER_ID} data-color={COLOR_MODE_SEQUENCE[colorIndex].value}>
-				{children}
-			</div>
+			{children}
 		</ColorModeContext.Provider>
 	);
 }

@@ -161,13 +161,21 @@ button {
 	--color-secondary: white;
 }
 
-#color-mode-wrapper[data-color='dark'] {
+body[data-color='dark'] {
 	--color-primary: #c3c3c3;
-	--color-sub-primary: #ff0211;
+	--color-sub-primary: #d02d37;
 	--color-secondary: #2c3e50;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
+	color: var(--color-primary);
+	background-color: var(--color-secondary);
+	transition: background 0.25s ease;
+	min-height: 100vh;
 	font-family: IBM Plex Mono, monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -260,15 +268,4 @@ a:hover {
 		font-size: 2.6125em;
 		font-weight: bold;
 	}
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
-.container {
-	color: var(--color-primary);
-	background-color: var(--color-secondary);
-	transition: background 0.25s ease;
-	min-height: 100vh;
 }

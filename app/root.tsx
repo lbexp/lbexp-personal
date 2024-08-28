@@ -17,11 +17,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Links />
 			</head>
 			<body>
-				<ColorModeProvider>
-					<div className="container">{children}</div>
-					<ScrollRestoration />
-					<Scripts />
-				</ColorModeProvider>
+				<ColorModeProvider>{children}</ColorModeProvider>
+				<ScrollRestoration />
+				<Scripts />
 			</body>
 		</html>
 	);

@@ -56,3 +56,7 @@
 .linkedin-logo:hover {
 	fill: var(--color-sub-primary);
 }
+
+.mail {
+	font-weight: normal;
+}
