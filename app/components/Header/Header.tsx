@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { Link } from '@remix-run/react';
 
 import useScrollEvent from '~/hooks/use-scroll-event';
-import { CONTACTS_ELEMENT_ID } from '~/models/common';
+import { useColorMode } from '~/contexts/color-mode';
+import { COLOR_MODE_SEQUENCE, CONTACTS_ELEMENT_ID } from '~/models/common';
 
 import styles from './styles.module.css';
 
 export default function Header() {
 	const [hideNav, setHideNav] = useState(false);
+	const colorMode = useColorMode();
 
 	useScrollEvent(() => {
 		if (window.scrollY > 0) {
@@ -28,9 +30,12 @@ export default function Header() {
 						<h1 className={styles.logo}>lbexp</h1>
 					</Link>
 
-					<nav className={styles.nav}>
+					<div className={styles.nav}>
 						<Link to={`#${CONTACTS_ELEMENT_ID}`}>Contacts</Link>
-					</nav>
+						<button className={styles['color-button']} onClick={colorMode.onChangeColor}>
+							{COLOR_MODE_SEQUENCE[colorMode.colorIndex].icon}
+						</button>
+					</div>
 				</div>
 
 				<div className={styles.pin}>

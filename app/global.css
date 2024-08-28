@@ -154,6 +154,7 @@ button {
 	background: unset;
 	color: unset;
 	cursor: pointer;
+	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
@@ -166,11 +167,19 @@ button {
 	--color-secondary: white;
 }
 
+#color-mode-wrapper[data-color='dark'] {
+	--color-primary: white;
+	--color-sub-primary: #ff0211;
+	--color-secondary: #2c3e50;
+}
+
 body {
 	font-family: IBM Plex Mono, monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: var(--color-primary);
+	background-color: var(--color-secondary);
+	transition: background 0.25s ease;
 }
 
 h1,
