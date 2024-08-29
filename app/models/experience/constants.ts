@@ -5,7 +5,7 @@ export const EXPERIENCES: Experience[] = [
 		title: 'Software Engineer - Web Platform',
 		subtitle: 'Tokopedia',
 		date: 'April 2022 - August 2024',
-		desc: 'Joined the web platform engineering team. Mainly develop and maintain features on Purchase Platform web modules (Cart, Checkout, Order History & Wishlist), for both mobile & desktop views. Technologies that were used are React, TypeScript, Emotion, Apollo & other inhouse libraries.'
+		desc: 'Joined the web platform engineering team. Mainly developed and maintained features on Purchase Platform web modules (Cart, Checkout, Order History & Wishlist), for both mobile & desktop views. Technologies that were used are React, TypeScript, Emotion, Apollo & other inhouse libraries.'
 	},
 	{
 		title: 'Software Engineer',
