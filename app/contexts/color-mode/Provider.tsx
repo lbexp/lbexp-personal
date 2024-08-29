@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect, useRef, useState } from 'react';
+import { PropsWithChildren, useLayoutEffect, useRef, useState } from 'react';
 
 import { COLOR_MODE_SEQUENCE } from '~/models/common';
 import { getLocalStorage, setLocalStorage } from '~/utils/local-storage';
@@ -31,7 +31,7 @@ export default function ColorModeProvider({ children }: PropsWithChildren<unknow
 		});
 	};
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (!initiated.current) {
 			const initialColor = getLocalStorage<string>(COLOR_LS_KEY);
 

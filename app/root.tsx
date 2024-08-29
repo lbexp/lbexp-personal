@@ -1,8 +1,6 @@
 import { LinksFunction } from '@remix-run/node';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 
-import { ColorModeProvider } from './contexts/color-mode';
-
 import globalStyles from './global.css?url';
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: globalStyles }];
@@ -17,7 +15,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Links />
 			</head>
 			<body>
-				<ColorModeProvider>{children}</ColorModeProvider>
+				{children}
 				<ScrollRestoration />
 				<Scripts />
 			</body>
