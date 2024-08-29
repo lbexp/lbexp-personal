@@ -21,7 +21,9 @@ export default function Introduction() {
 				))}
 			</h2>
 			<p className={styles.desc}>
-				<span className={styles['desc-value']}>Software Engineer based in Indonesia</span>
+				<span className={styles['desc-value']}>
+					Software Engineer who works around web technologies, based in Indonesia.
+				</span>
 			</p>
 		</section>
 	);
