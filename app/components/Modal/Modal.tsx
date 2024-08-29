@@ -38,7 +38,7 @@ export default function Modal(props: ModalProps) {
 				onKeyUp={(event) => event.stopPropagation()}
 			>
 				<button className={styles.close} onClick={handleClose}>
-					❌
+					X
 				</button>
 				{typeof children === 'function' ? children({ close: handleClose }) : children}
 			</div>
