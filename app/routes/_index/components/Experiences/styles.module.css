@@ -96,7 +96,25 @@
 
 .item-journey-content-wrapper {
 	overflow: hidden;
-	height: 122px;
+	min-height: 122px;
+	cursor: pointer;
+}
+
+.item-journey-modal-wrapper {
+	overflow: hidden;
+}
+
+.item-journey-content-wrapper:hover > .item-journey-content-line {
+	width: 100%;
+	transition: width 0.3s ease;
+}
+
+.item-journey-content-line {
+	display: block;
+	height: 2px;
+	width: 0%;
+	margin-top: 8px;
+	background-color: var(--color-sub-primary);
 }
 
 .item-journey-content-value {
