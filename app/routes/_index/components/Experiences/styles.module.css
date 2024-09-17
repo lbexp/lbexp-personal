@@ -66,8 +66,8 @@
 	font-weight: 300;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	line-clamp: 2;
-	-webkit-line-clamp: 2;
+	line-clamp: 1;
+	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 }
 
@@ -105,6 +105,11 @@
 
 .item-journey-modal-wrapper {
 	overflow: hidden;
+}
+
+.item-journey-modal-title {
+	font-size: 1.5rem;
+	font-weight: 300;
 }
 
 .item-journey-content-wrapper:hover > .item-journey-content-line {
@@ -173,6 +178,10 @@
 	.item-journey-desc {
 		margin-top: 8px;
 		font-size: 1.125rem;
+	}
+
+	.item-journey-modal-title {
+		font-size: 2rem;
 	}
 
 	.item-journey-content-wrapper {

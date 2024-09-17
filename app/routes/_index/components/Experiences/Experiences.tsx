@@ -54,7 +54,7 @@ function ModalDetail({
 	return (
 		<Modal className={styles['item-journey-modal-wrapper']} onClose={onClose}>
 			<div className={styles['item-journey-content-value']}>
-				<h3 className={styles['item-journey-title']}>{experience.title}</h3>
+				<h3 className={styles['item-journey-modal-title']}>{experience.title}</h3>
 				<h4 className={styles['item-journey-subtitle']}>{experience.subtitle}</h4>
 				<p className={styles['item-journey-time']}>{experience.date}</p>
 				<p className={styles['item-journey-desc']}>{experience.desc}</p>
